@@ -21,6 +21,24 @@ void printList(Node * head){
     }
 }
 
+void searchNode(Node * head, int val){
+    Node * temp = head;
+    int pos = 1;
+    while(temp != NULL){
+        if(temp->data==val){
+            cout<<"Data Found at position "<<pos<<endl;
+            break;
+        }
+        pos++;
+        temp = temp->next;
+
+    }
+    if(temp == NULL){
+        cout<<"Data Not found."<<endl;
+
+    }
+}
+
 
 void removeNode(Node *&head, int val){
     if(head == NULL){
@@ -80,6 +98,12 @@ int main(){
         cout<<"After Delete List: ";
         printList(head);
         cout<<endl;
+        int s_data;
+        cout<<"Data to be Search: ";
+        cin>>s_data;
+
+        searchNode(head, s_data);
+
 
 
     return 0;
