@@ -41,7 +41,7 @@ void removeNode(Node *&head, int val){
         curr = curr->next;
     }
     if(curr==NULL){
-        cout<<“Data is Not Found.”<<endl;
+        cout<<"Data is Not Found."<<endl;
     }
     prev->next = curr->next;
     delete curr;
